@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension SimpleOnboarding.Scene {
+extension SimpleOnboarding.MainScene {
     final class ViewModel: StateMachine, Completable {
         enum Actions {
             case prevSlide

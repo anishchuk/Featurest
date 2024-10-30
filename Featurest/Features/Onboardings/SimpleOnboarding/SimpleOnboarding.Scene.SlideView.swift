@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension SimpleOnboarding.Scene {
+extension SimpleOnboarding.MainScene {
     struct SlideView: View {
         let data: ViewData
         
@@ -26,7 +26,7 @@ extension SimpleOnboarding.Scene {
     }
 }
 
-extension SimpleOnboarding.Scene.SlideView {
+extension SimpleOnboarding.MainScene.SlideView {
     protocol ViewData {
         var id: Int { get }
         var title: String { get }
@@ -36,7 +36,7 @@ extension SimpleOnboarding.Scene.SlideView {
 }
 
 #Preview {
-    SimpleOnboarding.Scene.SlideView(
+    SimpleOnboarding.MainScene.SlideView(
         data: SimpleOnboarding.Mocks.slides[0]
     )
 }

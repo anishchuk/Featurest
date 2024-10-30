@@ -1,20 +1,21 @@
 //
-//  SimpleOnboarding.swift
+//  FakeStore.swift
 //  Featurest
 //
 //  Created by Slava Anishchuk on 30.10.2024.
 //
 
-import SwiftUI
+import Foundation
 
-enum SimpleOnboarding: Feature {
-    enum Models { }
+enum FakeStore: Feature {
+    enum Models {}
+    enum Routes {}
+    enum Services {}
     
     static func start(_ onCompletion: CompletionAction? = nil) -> MainScene {
         return MainScene(
             viewModel: .init(
-                state: .init(slides: Mocks.slides),
-                onCompletion: onCompletion
+                service: FakeStore.Services.APIService()
             )
         )
     }

@@ -10,7 +10,7 @@ import SwiftUI
 typealias CompletionAction = (() -> Void)
 
 protocol Feature {
-    associatedtype Scene: FeatureScene
+    associatedtype MainScene: FeatureScene
 
-    static func start(_ onCompletion: CompletionAction?) -> Scene
+    static func start(_ onCompletion: CompletionAction?) -> MainScene
 }

@@ -18,7 +18,7 @@ struct FeaturestApp: App {
                     onboardingIsShowed = true
                 }
             } else {
-                Text("Empty Scene")
+                FakeStore.start()
             }
         }
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension SimpleOnboarding {
-    struct Scene: FeatureScene {
+    struct MainScene: FeatureScene {
         @StateObject var viewModel: ViewModel
         
         var body: some View {
@@ -40,7 +40,7 @@ extension SimpleOnboarding {
 }
 
 #Preview {
-    SimpleOnboarding.Scene(
+    SimpleOnboarding.MainScene(
         viewModel: .init(
             state: .init(slides: SimpleOnboarding.Mocks.slides)
         )

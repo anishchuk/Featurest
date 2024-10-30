@@ -16,4 +16,4 @@ extension SimpleOnboarding.Models {
     }
 }
 
-extension SimpleOnboarding.Models.Slide: SimpleOnboarding.Scene.SlideView.ViewData {}
+extension SimpleOnboarding.Models.Slide: SimpleOnboarding.MainScene.SlideView.ViewData {}
