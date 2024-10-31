@@ -34,7 +34,7 @@ extension SimpleOnboarding {
             )
             .frame(width: 160, height: 44)
             .background(viewModel.state.buttonBackground)
-            .cornerRadius(Radiuses.buttonCornerRadius)
+            .cornerRadius(Radiuses.buttonCorners)
         }
     }
 }

@@ -15,5 +15,10 @@ extension FakeStore.Models {
         var category: String
         var description: String
         var image: String
+        
+        var imageUrl: URL? {
+            guard let url = URL(string: image) else { return nil }
+            return url
+        }
     }
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 enum Radiuses {
-    static let buttonCornerRadius: CGFloat = 8
+    static let buttonCorners: CGFloat = 8
+    static let cardview: CGFloat = 16
 }
