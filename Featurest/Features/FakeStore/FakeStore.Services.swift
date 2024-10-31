@@ -6,13 +6,7 @@
 //
 
 extension FakeStore.Services {
-    protocol Repository {
-        func fetchProducts() async throws -> [FakeStore.Models.Product]
-    }
-}
-
-extension FakeStore.Services {
-    final class APIService: Repository, NetworkService {
+    final class APIService: FakeStore.DataProvider, NetworkService {
         enum Endpoints: URLEndpoint {
             static var baseUrl: String { "https://fakestoreapi.com" }
             
@@ -32,7 +26,7 @@ extension FakeStore.Services {
 }
 
 extension FakeStore.Services {
-    final class MockService: Repository {
+    final class MockService: FakeStore.DataProvider {
         func fetchProducts() async throws -> [FakeStore.Models.Product] {
             return [
                 .init(

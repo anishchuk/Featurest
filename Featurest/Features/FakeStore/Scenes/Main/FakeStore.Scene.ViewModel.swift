@@ -18,11 +18,11 @@ extension FakeStore.MainScene {
         }
         
         @Published var state: State
-        let service: FakeStore.Services.Repository
+        let service: FakeStore.DataProvider
 
         init(
             state: State = .init(),
-            service: FakeStore.Services.Repository
+            service: FakeStore.DataProvider
         ) {
             self.state = state
             self.service = service

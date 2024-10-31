@@ -20,3 +20,9 @@ enum FakeStore: Feature {
         )
     }
 }
+
+extension FakeStore {
+    protocol DataProvider {
+        func fetchProducts() async throws -> [FakeStore.Models.Product]
+    }
+}
