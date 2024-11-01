@@ -10,7 +10,7 @@ import SwiftUI
 extension SimpleOnboarding {
     struct MainScene: FeatureScene {
         @StateObject var viewModel: ViewModel
-        
+
         var body: some View {
             VStack {
                 TabView(selection: $viewModel.state.currentSlide) {
@@ -21,7 +21,7 @@ extension SimpleOnboarding {
                 .tabViewStyle(.page)
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             }
-            
+
             Button(
                 action: { viewModel.action(.nextSlide) },
                 label: {

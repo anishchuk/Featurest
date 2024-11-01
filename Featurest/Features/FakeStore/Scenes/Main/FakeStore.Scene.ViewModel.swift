@@ -12,11 +12,11 @@ extension FakeStore.MainScene {
         enum Actions {
             case fetchProducts
         }
-        
+
         struct State {
             var products: [FakeStore.Models.Product] = []
         }
-        
+
         @Published var state: State
         let service: FakeStore.DataProvider
 
@@ -27,7 +27,7 @@ extension FakeStore.MainScene {
             self.state = state
             self.service = service
         }
-        
+
         func action(_ action: Actions) {
             switch action {
             case .fetchProducts:

@@ -9,16 +9,16 @@ extension FakeStore.Services {
     final class APIService: FakeStore.DataProvider, NetworkService {
         enum Endpoints: URLEndpoint {
             static var baseUrl: String { "https://fakestoreapi.com" }
-            
+
             case products
-            
+
             var uri: String {
                 switch self {
                 case .products: return "/products"
                 }
             }
         }
-        
+
         func fetchProducts() async throws -> [FakeStore.Models.Product] {
             return try await request(endpoint: .products)
         }

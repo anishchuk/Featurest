@@ -11,7 +11,7 @@ enum FakeStore: Feature {
     enum Models {}
     enum Routes {}
     enum Services {}
-    
+
     static func start(_ onCompletion: CompletionAction? = nil) -> MainScene {
         return MainScene(
             viewModel: .init(

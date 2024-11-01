@@ -10,7 +10,7 @@ import SwiftUI
 extension SimpleOnboarding.MainScene {
     struct SlideView: View {
         let data: ViewData
-        
+
         var body: some View {
             VStack(spacing: Spacings.standard) {
                 Image(data.imageName)

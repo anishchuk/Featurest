@@ -10,11 +10,11 @@ import SwiftUI
 @main
 struct FeaturestApp: App {
     @State var onboardingIsShowed: Bool = false
-    
+
     var body: some Scene {
         WindowGroup {
             if !onboardingIsShowed {
-                SimpleOnboarding.start() {
+                SimpleOnboarding.start {
                     onboardingIsShowed = true
                 }
             } else {

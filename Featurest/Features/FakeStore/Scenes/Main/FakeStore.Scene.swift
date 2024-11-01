@@ -13,7 +13,7 @@ extension FakeStore {
     struct MainScene: FeatureScene {
         @StateObject var viewModel: ViewModel
         private let gridItemsLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 2)
-        
+
         var body: some View {
             VStack {
                 Text("Products")

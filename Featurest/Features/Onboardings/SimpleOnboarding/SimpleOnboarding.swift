@@ -9,7 +9,7 @@ import SwiftUI
 
 enum SimpleOnboarding: Feature {
     enum Models { }
-    
+
     static func start(_ onCompletion: CompletionAction? = nil) -> MainScene {
         return MainScene(
             viewModel: .init(

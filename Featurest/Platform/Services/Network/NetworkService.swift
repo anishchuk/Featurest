@@ -27,18 +27,18 @@ extension NetworkService {
     ) async throws -> T where T: Decodable {
         guard let url = endpoint.url
         else { throw NetworkError.wrongEndpoint }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.httpBody = httpBody
         request.allHTTPHeaderFields = headers
-        
+
         let (data, _) = try await URLSession.shared.data(for: request)
         guard let object = try? JSONDecoder().decode(T.self, from: data)
         else {
             throw NetworkError.couldNotMapResponse
         }
-        
+
         return object
     }
 }

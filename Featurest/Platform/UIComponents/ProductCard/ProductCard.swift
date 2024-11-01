@@ -24,11 +24,11 @@ struct ProductCard: View {
             .frame(maxWidth: .infinity)
             .frame(height: 180)
             .clipShape(.rect(cornerRadius: Radiuses.cardview))
-            
+
             VStack(alignment: .leading, spacing: Spacings.standard) {
                 Text(data.title)
                     .lineLimit(2)
-                
+
                 Text("$ \(data.price)")
                     .fontWeight(.bold)
                     .lineLimit(1)
